@@ -88,7 +88,7 @@ function choose_khadas_board() {
 	echo ""
 
 	local DEFAULT_NUM
-	DEFAULT_NUM=2
+	DEFAULT_NUM=3
 
 	export KHADAS_BOARD=
 	local ANSWER
@@ -218,7 +218,7 @@ function choose_linux_version() {
 	echo ""
 
 	local DEFAULT_NUM
-	DEFAULT_NUM=1
+	DEFAULT_NUM=2
 
 	export LINUX=
 	local ANSWER
