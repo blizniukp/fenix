@@ -9,7 +9,7 @@ endif
 
 define help_message
 	@echo "You should setup environment first."
-	@echo "Run 'source env/setenv.sh' to setup environment."
+	@echo "Run 'source env/setenv_XXXXXXXX.sh' to setup environment."
 endef
 
 release:
