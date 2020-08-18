@@ -32,6 +32,7 @@ INSTALL_TYPE=
 DISTRIB_TYPE=
 VENDOR=
 CHIP=
+SYSTEM_TYPE=khadasvim2
 
 ###############################################################
 if [ "$1" == "expert" ]; then
@@ -64,6 +65,14 @@ function export_version() {
 
 	source $ROOT/config/version
 	export VERSION
+}
+
+## Export system type
+function export_system_type() {
+        cp -u ~/Khadas/common_files/RUNME_SYSTEM_TYPE.sh $ROOT/scripts/chroot-scripts
+        chmod +x $ROOT/scripts/chroot-scripts/RUNME_SYSTEM_TYPE.sh
+
+        export SYSTEM_TYPE
 }
 
 ## Choose Khadas board
@@ -603,6 +612,7 @@ function lunch() {
 
 #####################################################################3
 export_version
+export_system_type
 choose_khadas_board
 choose_uboot_version
 choose_linux_version

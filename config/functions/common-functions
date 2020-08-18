@@ -144,6 +144,7 @@ mount_chroot() {
 	mount -t sysfs chsys $target/sys
 	mount -t devtmpfs chdev $target/dev || mount --bind /dev $target/dev
 	mount -t devpts chpts $target/dev/pts
+	mount --bind /etc/resolv.conf $target/etc/resolv.conf
 }
 
 ## Umount chroot
@@ -160,6 +161,9 @@ umount_chroot() {
 		umount $target/sys/kernel/security
 	fi
 	umount -l $target/sys
+	if mount | grep "resolv" > /dev/null; then
+		umount `mount | grep "resolv" | awk '{ print $3 }'`
+	fi
 }
 
 ## Install debs in chroot

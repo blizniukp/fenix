@@ -32,3 +32,5 @@
 /easy_setup_target/
 
 /*.patch
+
+/scripts/chroot-scripts/RUNME_SYSTEM_TYPE.sh
