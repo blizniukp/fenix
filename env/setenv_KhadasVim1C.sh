@@ -601,12 +601,13 @@ function lunch() {
 	echo "#DISTRIBUTION=${DISTRIBUTION}"
 	echo "#DISTRIB_RELEASE=${DISTRIB_RELEASE}"
 	echo "#DISTRIB_TYPE=${DISTRIB_TYPE}"
-	echo "#DISTRIB_ARCH=${DISTRIB_ARCH}"
-	echo "#INSTALL_TYPE=${INSTALL_TYPE}"
-	echo
-	echo "==========================================="
-	echo ""
-	echo "Environment setup done."
+        echo "#INSTALL_TYPE=${INSTALL_TYPE}"
+        echo "==========================================="
+        echo "#SYSTEM_TYPE=${SYSTEM_TYPE}"
+        echo
+        echo "==========================================="
+        echo ""
+        echo "Environment setup done."
 	echo "Type 'make' to build."
 	echo ""
 }
