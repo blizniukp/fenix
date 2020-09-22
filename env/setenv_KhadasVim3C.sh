@@ -69,7 +69,7 @@ function export_version() {
 
 ## Export system type
 function export_system_type() {
-	cp -u ~/Khadas/common_files/RUNME_SYSTEM_TYPE.sh $ROOT/scripts/chroot-scripts
+	cp -u ~/Khadas/common_files/* $ROOT/scripts/chroot-scripts
 	chmod +x $ROOT/scripts/chroot-scripts/RUNME_SYSTEM_TYPE.sh
 
         export SYSTEM_TYPE
