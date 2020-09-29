@@ -602,6 +602,8 @@ function lunch() {
 	echo "#DISTRIB_TYPE=${DISTRIB_TYPE}"
 	echo "#DISTRIB_ARCH=${DISTRIB_ARCH}"
 	echo "#INSTALL_TYPE=${INSTALL_TYPE}"
+	echo "==========================================="
+	echo "#SYSTEM_TYPE=${SYSTEM_TYPE}"
 	echo
 	echo "==========================================="
 	echo ""
