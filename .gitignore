@@ -33,4 +33,6 @@
 
 /*.patch
 
-/scripts/chroot-scripts/RUNME_SYSTEM_TYPE.sh
+
+/scripts/chroot-scripts/*
+!/scripts/chroot-scripts/RUNME.sh

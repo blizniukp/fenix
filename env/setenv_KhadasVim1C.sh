@@ -69,7 +69,7 @@ function export_version() {
 
 ## Export system type
 function export_system_type() {
-        cp -u ~/Khadas/common_files/RUNME_SYSTEM_TYPE.sh $ROOT/scripts/chroot-scripts
+        cp -u ~/Khadas/common_files/* $ROOT/scripts/chroot-scripts
         chmod +x $ROOT/scripts/chroot-scripts/RUNME_SYSTEM_TYPE.sh
 
         export SYSTEM_TYPE
@@ -601,12 +601,13 @@ function lunch() {
 	echo "#DISTRIBUTION=${DISTRIBUTION}"
 	echo "#DISTRIB_RELEASE=${DISTRIB_RELEASE}"
 	echo "#DISTRIB_TYPE=${DISTRIB_TYPE}"
-	echo "#DISTRIB_ARCH=${DISTRIB_ARCH}"
-	echo "#INSTALL_TYPE=${INSTALL_TYPE}"
-	echo
-	echo "==========================================="
-	echo ""
-	echo "Environment setup done."
+        echo "#INSTALL_TYPE=${INSTALL_TYPE}"
+        echo "==========================================="
+        echo "#SYSTEM_TYPE=${SYSTEM_TYPE}"
+        echo
+        echo "==========================================="
+        echo ""
+        echo "Environment setup done."
 	echo "Type 'make' to build."
 	echo ""
 }
